@@ -113,6 +113,7 @@ img {
     &:hover {
         background-color: #fff;
         color: $secondary-color;
+        
     }
 }
 
@@ -364,11 +365,18 @@ section, footer, .content-area, main {
     color: $primary-color !important;
     padding: 15px 25px;
     transition: .3s ease-in;
+    border: 1px solid $primary-color;
 
     &:hover {
         background-color: $primary-color !important;
         color: $secondary-color !important;
+        border: 1px solid $secondary-color;
     }
+}
+
+.price ins {
+    font-size: 25px;
+    text-decoration: none;
 }
 
 .shop-section__body {
@@ -482,7 +490,7 @@ section, footer, .content-area, main {
     align-items: center;
     color: #fff;
     margin: 20px 0;
-    padding-top: 25px;
+    margin-top: 45px;
 
     &__heading {
         color: #fff;

@@ -343,10 +343,17 @@ section, footer, .content-area, main {
   color: rgb(255, 255, 255) !important;
   padding: 15px 25px;
   transition: 0.3s ease-in;
+  border: 1px solid rgb(255, 255, 255);
 }
 .woocommerce ul.products li.product .button:hover {
   background-color: rgb(255, 255, 255) !important;
   color: rgb(0, 0, 0) !important;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.price ins {
+  font-size: 25px;
+  text-decoration: none;
 }
 
 .shop-section__body {
@@ -443,7 +450,7 @@ section, footer, .content-area, main {
   align-items: center;
   color: #fff;
   margin: 20px 0;
-  padding-top: 25px;
+  margin-top: 45px;
 }
 .page-hero__heading {
   color: #fff;
