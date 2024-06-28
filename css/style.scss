@@ -322,14 +322,14 @@ section, footer, .content-area, main {
         background-image: url("../images/female.jpg");
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: calc(100% - -50px);
+        background-position: 100%;
     }
 
     &--men {
         background-image: url("../images/male.jpg");
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: calc(100% - -30px);
+        background-position: 100%;
     }
 }
 
