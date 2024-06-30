@@ -290,6 +290,7 @@ section, footer, .content-area, main {
 
 /* Block */
 .promo-card {
+  position: relative;
   text-decoration: none;
   padding: 16px;
   margin-bottom: 20px;
@@ -303,6 +304,7 @@ section, footer, .content-area, main {
 }
 .promo-card__body {
   max-width: 70%;
+  z-index: 2;
 }
 .promo-card--gray {
   background-color: #f2f3f5;
@@ -320,9 +322,11 @@ section, footer, .content-area, main {
   background-position: 100%;
 }
 
+
 /* Shop Section */
 .shop-section__heading, .shop-section__body {
   text-align: center;
+  z-index: 1;
 }
 
 .shop {
@@ -358,6 +362,25 @@ section, footer, .content-area, main {
 
 .shop-section__body {
   margin-bottom: 45px;
+}
+
+.woocommerce .quantity {
+  
+  .qty  {
+    width: 90px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid;
+  }
+}
+
+.woocommerce .cart button {
+  background-color: rgb(0, 0, 0) !important;
+  color: rgb(255, 255, 255) !important;
+  padding: 15px 25px;
+  transition: 0.3s ease-in;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 /* Newsletter */
