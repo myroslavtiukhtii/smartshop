@@ -379,7 +379,8 @@ section, footer, .content-area, main {
     padding-bottom: 50px;
 
     .woocommerce-product-gallery__image a img {
-        padding-bottom: 25px;
+        width: unset !important;
+        margin-bottom: 25px;
         border-radius: 25px;
     }
     
@@ -401,6 +402,13 @@ section, footer, .content-area, main {
         color: $secondary-color !important;
         border: 1px solid $secondary-color;
     }
+}
+
+
+.woocommerce div.product div.images .flex-control-thumbs li {
+    max-width: 90px;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .price ins {
