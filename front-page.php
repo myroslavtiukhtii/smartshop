@@ -15,13 +15,17 @@
 <section class="standard-promo">
 
     <a href="/product-category/women/" class="promo-card promo-card--gray promo-card--women">
-        <h2 class="promo-card__heading">Shop Women</h2>
-        <p class="promo-card__body">Women's new arrivals. It's time to explore your options.</p>
+        <div class="promo-card__titles">
+            <h2 class="promo-card__heading">Shop Women</h2>
+            <p class="promo-card__body">Women's new arrivals. It's time to explore your options.</p>
+        </div>
     </a>
 
     <a href="/product-category/men/" class="promo-card promo-card--gray promo-card--men">
-        <h2 class="promo-card__heading">Shop Men</h2>
-        <p class="promo-card__body">Mens's new arrivals. It's time to explore your options.</p>
+        <div class="promo-card__titles">
+            <h2 class="promo-card__heading">Shop Men</h2>
+            <p class="promo-card__body">Mens's new arrivals. It's time to explore your options.</p>
+        </div>
     </a>
 
 </section>

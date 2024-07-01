@@ -98,7 +98,6 @@ img {
 
 .button {
     display: inline-block;
-    color: $primary-color;
     padding: 10px 16px;
     text-align: center;
     text-decoration: none;
@@ -109,11 +108,14 @@ img {
     @include tablet-portrait {
         font-size: 1.6rem;
     }
+}
+
+.button-white {
+    color: $primary-color !important;
 
     &:hover {
+        color: $secondary-color !important;
         background-color: #fff;
-        color: $secondary-color;
-        
     }
 }
 
@@ -250,7 +252,7 @@ section, footer, .content-area, main {
         background-position: 60%;
         position: absolute;
         opacity: 0.8;   
-        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 0 2000px rgba(160, 160, 160, 0.499);
         top: 0; right: 0; bottom: 0; left: 0;
         z-index: -1;
     }
@@ -263,8 +265,20 @@ section, footer, .content-area, main {
 
         h1 {
             margin: 26px;
+            margin-left: 0px;
             padding-bottom:  20px;
         }
+    }
+
+    .wrapper__heading {
+        text-align: left;
+        opacity: 0;
+        animation: opacity 0.4s linear forwards;
+    }
+
+    @keyframes opacity {
+        from {opacity: 0;}
+        to {opacity: 1;}
     }
 
     @include tablet-portrait {
@@ -290,6 +304,25 @@ section, footer, .content-area, main {
             display: grid;
             align-content: center;
 
+            &:hover {
+                .promo-card__titles {
+                    transform: translateX(5px);
+                }
+            }
+
+            &__titles {
+                width: 50%;
+                padding: 10px;
+                background: rgba(255, 255, 255, 0.665);
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                transition: .3s ease-in;
+            }
+
             &__heading, &__body { max-width: 300px; text-align: center; }
             &__heading { margin: 0; }
             &__body { line-height: 3rem; }
@@ -309,11 +342,7 @@ section, footer, .content-area, main {
     padding: $mobile-padding;
     margin-bottom: 20px;
     border-radius: 25px;
-    transition: .3s ease-in;
-
-    &:hover {
-        text-decoration: underline;
-    }
+    transition: .3s ease-in;s
 
     /* Element */
     &__body { max-width: 70%; }
