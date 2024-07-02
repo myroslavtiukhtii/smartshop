@@ -395,6 +395,20 @@ s .promo-card__body {
   margin-bottom: 45px;
 }
 
+/*Product*/
+.summary .single_add_to_cart_button {
+  padding: 15px 25px !important;
+  background-color: rgb(0, 0, 0) !important;
+  font-size: 20px !important;
+  border-radius: 5px !important;
+}
+.summary .qty {
+  width: 100px !important;
+  font-size: 15px;
+  border: 1px solid #000;
+  border-radius: 5px !important;
+}
+
 /* Newsletter */
 .newsletter {
   display: grid;
