@@ -2,7 +2,23 @@ jQuery(document).ready(function() {
     jQuery('.menu-link').click(function() {
         jQuery('.menu').toggleClass('active');
     });
+
+    jQuery('.icon-search').click(function() {
+      jQuery('.main-header__search').toggleClass('active');
+  });
+
+  document.addEventListener('click', function(event) {
+    const searchContainer = document.querySelector('.main-header__search');
+    const iconSearch = document.querySelector('.icon-search');
+
+    if (!searchContainer.contains(event.target) && !iconSearch.contains(event.target)) {
+        searchContainer.classList.remove('active');
+    }
+  });
+
+
 });
+
 
 
 function reveal() {

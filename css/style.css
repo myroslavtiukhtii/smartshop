@@ -139,6 +139,7 @@ section, footer, .content-area, main {
 /* Header
 ==============================================*/
 .main-header {
+  position: relative;
   display: grid;
   gap: 10px;
   grid-template: "nav logo tools";
@@ -234,6 +235,22 @@ section, footer, .content-area, main {
   .main-header__nav .menu-link {
     display: none;
   }
+}
+.main-header__search {
+  position: absolute;
+  top: -150%;
+  opacity: 0;
+}
+.main-header__search.active {
+  display: grid;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-color: rgba(240, 240, 240, 0.3882352941);
+  opacity: 1;
+  transition: 0.5s ease-in;
 }
 
 /* Hero
