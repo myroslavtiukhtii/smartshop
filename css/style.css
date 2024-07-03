@@ -1,6 +1,19 @@
 /*********************
     BREAKPOINTS
-*********************/ /* Veriables
+*********************/
+.reveal {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 0.3s all ease-in;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Veriables
 ==============================================*/
 /* Main
 ==============================================*/
@@ -257,7 +270,7 @@ section, footer, .content-area, main {
 .hero .wrapper__heading {
   text-align: left;
   opacity: 0;
-  animation: opacity 0.4s linear forwards;
+  animation: opacity 1.2s linear forwards;
 }
 @keyframes opacity {
   from {
@@ -327,9 +340,11 @@ section, footer, .content-area, main {
   margin-bottom: 20px;
   border-radius: 25px;
   transition: 0.3s ease-in;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  /* Element */
   /* Modifiers */
 }
-s .promo-card__body {
+.promo-card__body {
   max-width: 70%;
 }
 .promo-card--gray {
@@ -363,8 +378,8 @@ s .promo-card__body {
   border-radius: 25px;
 }
 .shop .product_title {
-  font-size: 50px;
-  line-height: 60px;
+  font-size: clamp(25px, 5vw, 50px);
+  line-height: clamp(45px, 7vw, 60px);
 }
 
 .woocommerce ul.products li.product .button {
@@ -378,6 +393,10 @@ s .promo-card__body {
   background-color: rgb(255, 255, 255) !important;
   color: rgb(0, 0, 0) !important;
   border: 1px solid rgb(0, 0, 0);
+}
+
+.woocommerce ul.products li.product a img {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .woocommerce div.product div.images .flex-control-thumbs li {

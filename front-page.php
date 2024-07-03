@@ -14,14 +14,14 @@
 
 <section class="standard-promo">
 
-    <a href="/product-category/women/" class="promo-card promo-card--gray promo-card--women">
+    <a href="/product-category/women/" class="promo-card promo-card--gray promo-card--women reveal">
         <div class="promo-card__titles">
             <h2 class="promo-card__heading">Shop Women</h2>
             <p class="promo-card__body">Women's new arrivals. It's time to explore your options.</p>
         </div>
     </a>
 
-    <a href="/product-category/men/" class="promo-card promo-card--gray promo-card--men">
+    <a href="/product-category/men/" class="promo-card promo-card--gray promo-card--men reveal">
         <div class="promo-card__titles">
             <h2 class="promo-card__heading">Shop Men</h2>
             <p class="promo-card__body">Mens's new arrivals. It's time to explore your options.</p>
@@ -33,7 +33,7 @@
 <section class="shop-section">
     <h2 class="shop-section__heading">Women's Best Sellers</h2>
     <p class="shop-section__body">Our women's bestsellers. They are smooth and soft<br/> with adjustable elastic loop.</p>
-    <div class="items">
+    <div class="items reveal">
         <?php echo do_shortcode('[best_selling_products limit="4"]'); ?>
     </div>
 </section>
@@ -41,14 +41,14 @@
 <section class="shop-section">
     <h2 class="shop-section__heading">New Arrivals</h2>
     <p class="shop-section__body">New arrivals. Updated every<br/> day. It's time to explore.</p>
-    <div class="items">
+    <div class="items reveal">
         <?php echo do_shortcode('[products limit="4" orderbyid="id" order="DESC"]'); ?>
     </div>
 </section>
 
 <section class="newsletter">
 
-        <h1 class="newsletter__heading">Sign up to Guards newsletter and
+        <h1 class="newsletter__heading">Sign up to Smartshop newsletter and
             get updates about our latest arrivals
             and exclusive sales.</h1>
 

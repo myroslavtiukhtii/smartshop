@@ -16,9 +16,9 @@
 
         </div>
 
-
-            <?php the_content(); ?>
-
+            <div class="reveal">
+                <?php the_content(); ?>
+            </div>
         <?php
 
 
