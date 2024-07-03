@@ -275,7 +275,7 @@ section, footer, .content-area, main {
 }
 .hero__wrapper {
   text-decoration: none;
-  height: 32vh;
+  height: 70vh;
   display: grid;
   align-content: end;
 }
