@@ -1,15 +1,40 @@
 <?php get_header(); ?>
 
 <section class="hero">
+    <div class="tiny-slider">
+            <div class="my-slide">
+                <?php
+                $args = array(
+                    'post_type'      => 'hero-slide',
+                    'posts_per_page' => -1,
+                );
+
+                $query = new WP_Query( $args );
+
+                if ( $query->have_posts() ) {
+                    while ( $query->have_posts() ) {
+                        $query->the_post();
+                        $image = get_field('hero_image');
+                        if( !empty( $image ) ): ?>
+                            <div class="slide">
+                                <div class="image" style="background-image: url(<?php echo esc_url($image['url']); ?>);" alt="image"></div>
+                            </div>
+                        <?php endif;
+                    }
+                } 
+                wp_reset_postdata();
+                ?>
+            </div>
+    </div>
     <div class="hero__wrapper">
         <div class="wrapper">
             <div class="wrapper__heading">
                 <span>THE NEW COLLECTION</span>
                 <h1>Elegant & Luxury</h1>
-                <a  href="/shop" class="button button-white">BROWSE COLLECTION</a>
+                <a href="/shop" class="button button-white">BROWSE COLLECTION</a>
             </div>
         </div>
-</div>
+    </div>
 </section>
 
 <section class="standard-promo">

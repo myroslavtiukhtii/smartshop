@@ -3,7 +3,7 @@
 *********************/
 .reveal {
   position: relative;
-  transform: translateY(50px);
+  transform: translateY(20px);
   opacity: 0;
   transition: 0.3s all ease-in;
 }
@@ -257,21 +257,28 @@ section, footer, .content-area, main {
 ==============================================*/
 .hero {
   position: relative;
+  overflow: hidden;
 }
-.hero::after {
-  content: "";
-  background-image: url("../images/hero-image.jpg");
+.hero .tiny-slider {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+.hero .tiny-slider .tns-controls, .hero .tiny-slider .tns-nav, .hero .tiny-slider button {
+  display: none;
+}
+.hero .tiny-slider .image {
+  width: 100%;
+  height: 90vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 60%;
-  position: absolute;
   opacity: 0.8;
   box-shadow: inset 0 0 0 2000px rgba(160, 160, 160, 0.499);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
 }
 .hero__wrapper {
   text-decoration: none;

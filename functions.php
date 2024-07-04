@@ -12,9 +12,17 @@ function woocommerce_custom_theme() {
     wp_enqueue_style('playfair_cdn');
 
     wp_enqueue_script('main-scripts', get_template_directory_uri() . '/js/script.js', array(), '1.0.0', true);
+    wp_enqueue_script('slider-scripts', 'https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js', array(), '1.0.0', true);
+
 }
 
 add_action('wp_enqueue_scripts', 'woocommerce_custom_theme');
+
+function enqueue_tiny_slider_styles() {
+    wp_enqueue_style('tiny-slider', 'https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css', array(), '2.9.4', 'all');
+}
+add_action('wp_enqueue_scripts', 'enqueue_tiny_slider_styles');
+
 
 /*Custom Menu*/
 

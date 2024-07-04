@@ -17,11 +17,7 @@ jQuery(document).ready(function() {
   });
 
 
-});
-
-
-
-function reveal() {
+  function reveal() {
     var reveals = document.querySelectorAll(".reveal");
   
     for (var i = 0; i < reveals.length; i++) {
@@ -38,3 +34,20 @@ function reveal() {
   }
   
   window.addEventListener("scroll", reveal);
+
+//Slider hero
+
+var slider = tns({
+    container: '.my-slide',
+    items: 1, 
+    autoplay: true,
+    swipeAngle: false,
+    gutter: 20,
+    speed: 400
+});
+
+
+});
+
+
+
