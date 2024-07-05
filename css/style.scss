@@ -52,6 +52,7 @@ p {
 /* Links */
 a:link {
     color: $secondary-color;
+    transition: .3s ease-in;
     &:hover {
         color: rgba(0,0,0,0.6);
     }
@@ -167,9 +168,33 @@ section, footer, .content-area, main {
         align-self: center;
 
         .menu { 
+
             display: none;
             padding: 0;
             list-style: none;
+
+            .menu-item {
+                position: relative;
+                cursor: pointer;
+            }
+
+            .menu-item::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                border-radius: 50%;
+                background-color: $secondary-color;
+                transition: .3s ease-in;
+            }
+
+            @media (any-hover:hover) {
+                .menu-item:hover::after {
+                    width: 100%;
+                }
+            }
 
             &.active {
                 display: flex;
@@ -280,7 +305,7 @@ section, footer, .content-area, main {
 
         .image {
             width: 100%;
-            height: 90vh;
+            height: 100vh;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: 60%;
@@ -429,6 +454,7 @@ section, footer, .content-area, main {
     padding: 15px 25px;
     transition: .3s ease-in;
     border: 1px solid $primary-color;
+    margin-right: 5px;
 
     &:hover {
         background-color: $primary-color !important;
@@ -460,6 +486,30 @@ section, footer, .content-area, main {
 
 .shop-section__body {
     margin-bottom: 45px;
+}
+
+/*Cart*/
+
+.wc-block-cart__empty-cart__title.with-empty-cart-icon:before {
+    color: rgba(128, 128, 128, 0.666);
+    font-size: 5px !important;
+}
+
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link {
+    background-color: $secondary-color !important;
+    color: $primary-color !important;
+    padding: 15px 25px;
+    transition: .3s ease-in;
+    border: 1px solid $primary-color;
+    margin-right: 5px;
+    border-radius: 15px;
+    font-size: 15px !important;
+}
+
+.wc-block-grid__product-add-to-cart.wp-block-button:hover .wp-block-button__link {
+    background-color: $primary-color !important;
+    color: $secondary-color !important;
+    border: 1px solid $secondary-color;
 }
 
 
@@ -544,6 +594,10 @@ section, footer, .content-area, main {
             }
         }
 
+        &__body.active {
+            display: block;
+        }
+
         @include tablet-portrait {
 
             &__body { display: block; }
@@ -593,3 +647,24 @@ section, footer, .content-area, main {
     }
 }
 
+/*Custom scroll*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

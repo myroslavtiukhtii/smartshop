@@ -62,6 +62,7 @@ p {
 /* Links */
 a:link {
   color: rgb(0, 0, 0);
+  transition: 0.3s ease-in;
 }
 a:link:hover {
   color: rgba(0, 0, 0, 0.6);
@@ -173,6 +174,26 @@ section, footer, .content-area, main {
   padding: 0;
   list-style: none;
 }
+.main-header__nav .menu .menu-item {
+  position: relative;
+  cursor: pointer;
+}
+.main-header__nav .menu .menu-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  transition: 0.3s ease-in;
+}
+@media (any-hover: hover) {
+  .main-header__nav .menu .menu-item:hover::after {
+    width: 100%;
+  }
+}
 .main-header__nav .menu.active {
   display: flex;
   position: absolute;
@@ -273,7 +294,7 @@ section, footer, .content-area, main {
 }
 .hero .tiny-slider .image {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 60%;
@@ -412,6 +433,7 @@ section, footer, .content-area, main {
   padding: 15px 25px;
   transition: 0.3s ease-in;
   border: 1px solid rgb(255, 255, 255);
+  margin-right: 5px;
 }
 .woocommerce ul.products li.product .button:hover {
   background-color: rgb(255, 255, 255) !important;
@@ -441,6 +463,29 @@ section, footer, .content-area, main {
 
 .shop-section__body {
   margin-bottom: 45px;
+}
+
+/*Cart*/
+.wc-block-cart__empty-cart__title.with-empty-cart-icon:before {
+  color: rgba(128, 128, 128, 0.666);
+  font-size: 5px !important;
+}
+
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link {
+  background-color: rgb(0, 0, 0) !important;
+  color: rgb(255, 255, 255) !important;
+  padding: 15px 25px;
+  transition: 0.3s ease-in;
+  border: 1px solid rgb(255, 255, 255);
+  margin-right: 5px;
+  border-radius: 15px;
+  font-size: 15px !important;
+}
+
+.wc-block-grid__product-add-to-cart.wp-block-button:hover .wp-block-button__link {
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(0, 0, 0) !important;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 /*Product*/
@@ -509,6 +554,9 @@ section, footer, .content-area, main {
   display: block;
   padding: 8px 0;
 }
+.footer-container__body.active {
+  display: block;
+}
 @media screen and (min-width: 768px) {
   .footer-container__body {
     display: block;
@@ -551,6 +599,27 @@ section, footer, .content-area, main {
 }
 .page-hero__heading {
   color: #fff;
+}
+
+/*Custom scroll*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /*# sourceMappingURL=style.css.map */

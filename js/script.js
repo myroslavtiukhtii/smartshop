@@ -41,10 +41,32 @@ var slider = tns({
     container: '.my-slide',
     items: 1, 
     autoplay: true,
+    rewind: true,
     swipeAngle: false,
     gutter: 20,
     speed: 400
 });
+
+//footer
+
+const footerButtons = document.querySelectorAll('.footer-container__heading');
+const footerBodies = document.querySelectorAll('.footer-container__body');
+
+footerButtons.forEach((button, index) => {
+
+  button.addEventListener('click', () => {
+    footerBodies.forEach((body) => {
+      body.classList.remove('active');
+    });
+
+    footerBodies[index].classList.add('active');
+  });
+});
+
+
+
+
+
 
 
 });
