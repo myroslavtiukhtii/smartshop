@@ -521,13 +521,30 @@ section, footer, .content-area, main {
   }
 }
 
-.form__email {
+.form .wpcf7-form-control-wrap {
   width: 100%;
   margin-bottom: 20px;
-  border-bottom: 1px solid rgb(255, 255, 255);
 }
-.form__submit {
+.form .wpcf7-form-control-wrap input {
   width: 100%;
+  background-color: rgba(208, 208, 208, 0.4549019608);
+}
+.form .wpcf7-submit {
+  width: 100%;
+  min-height: 70px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+.form .wpcf7-submit:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+}
+.form .wpcf7-spinner {
+  transform: translateY(-45px);
 }
 
 /* Footer */
