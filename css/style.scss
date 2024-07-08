@@ -426,6 +426,8 @@ section, footer, .content-area, main {
 
 
 /* Shop Section */
+
+
 .shop-section {
     &__heading, &__body {
         text-align: center;
@@ -472,7 +474,6 @@ section, footer, .content-area, main {
     box-shadow: rgba(0, 0, 0, 0.1) 3px 3px 3px 3px, rgba(0, 0, 0, 0.06) 3px 3px 3px 3px;
 }
 
-
 .woocommerce div.product div.images .flex-control-thumbs li {
     max-width: 90px;
     margin-right: 15px;
@@ -486,6 +487,20 @@ section, footer, .content-area, main {
 
 .shop-section__body {
     margin-bottom: 45px;
+}
+
+.shop__archive .shop {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    gap: 20px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+
+        .shop__filter {
+            order: -1;
+        }
+    }
 }
 
 /*Cart*/

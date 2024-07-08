@@ -465,6 +465,20 @@ section, footer, .content-area, main {
   margin-bottom: 45px;
 }
 
+.shop__archive .shop {
+  display: grid;
+  grid-template-columns: 1fr 0.3fr;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .shop__archive .shop {
+    grid-template-columns: 1fr;
+  }
+  .shop__archive .shop .shop__filter {
+    order: -1;
+  }
+}
+
 /*Cart*/
 .wc-block-cart__empty-cart__title.with-empty-cart-icon:before {
   color: rgba(128, 128, 128, 0.666);

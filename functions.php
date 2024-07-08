@@ -55,3 +55,13 @@ if (class_exists('WooCommerce')) {
     add_theme_support('wc-product-gallery-slider');
 }
 
+// Add custom body class for the shop page
+add_filter('body_class', 'custom_shop_body_class');
+function custom_shop_body_class($classes) {
+    if (is_shop()) {
+        $classes[] = 'shop__archive';
+    }
+    return $classes;
+}
+
+

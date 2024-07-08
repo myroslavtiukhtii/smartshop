@@ -37,15 +37,19 @@ jQuery(document).ready(function() {
 
 //Slider hero
 
-var slider = tns({
+const sliderContainer = document.querySelector('.my-slide');
+if (sliderContainer) {
+  const slider = tns({
     container: '.my-slide',
-    items: 1, 
+    items: 1,
     autoplay: true,
     rewind: true,
     swipeAngle: false,
     gutter: 20,
-    speed: 400
-});
+    speed: 400,
+  });
+} 
+
 
 //footer
 
