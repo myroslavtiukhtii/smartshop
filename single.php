@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<main>
+<main class="single__post">
 
     <?php 
         if(have_posts()) {
@@ -10,13 +10,13 @@
 
         <div class="page-hero" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>);">
 
-            <h1 class="page-hero__heading">
+            <h1 class="single__post__heading">
                 <?php the_title(); ?>
             </h1>
 
         </div>
 
-            <div class="reveal">
+            <div class="content">
                 <?php the_content(); ?>
             </div>
         <?php

@@ -682,6 +682,13 @@ section, footer, .content-area, main {
   outline: 1px solid rgb(0, 0, 0);
 }
 
+/*Single post*/
+.single__post__heading {
+  font-size: 35px;
+  text-align: center;
+  line-height: 120%;
+}
+
 /*Custom scroll*/
 /* width */
 ::-webkit-scrollbar {
