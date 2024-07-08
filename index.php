@@ -6,7 +6,7 @@
 <div class="page-hero" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>);">
 
     <h1 class="page-hero__heading">
-        <?php the_title(); ?>
+        Blog
     </h1>
 
 </div>
@@ -23,7 +23,7 @@
                 </h1>
 
                 <div class="post__content">
-                    <?php the_content(); ?>
+                    <?php the_excerpt(); ?>
                 </div>
 
                 <a href="<?php echo get_permalink(); ?>" class="post__button">Read more</a>
