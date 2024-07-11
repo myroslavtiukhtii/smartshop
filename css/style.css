@@ -479,6 +479,10 @@ section, footer, .content-area, main {
   }
 }
 
+.product-template-default .shop__filter {
+  display: none;
+}
+
 /*Cart*/
 .wc-block-cart__empty-cart__title.with-empty-cart-icon:before {
   color: rgba(128, 128, 128, 0.666);

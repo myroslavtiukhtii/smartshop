@@ -39,15 +39,15 @@
 
 <section class="standard-promo">
 
-    <a href="/product-category/women/" class="promo-card promo-card--gray promo-card--women reveal">
-        <div class="promo-card__titles">
+    <a href="/product-category/women/" class="promo-card promo-card--gray promo-card--women">
+        <div class="promo-card__titles reveal">
             <h2 class="promo-card__heading">Shop Women</h2>
             <p class="promo-card__body">Women's new arrivals. It's time to explore your options.</p>
         </div>
     </a>
 
-    <a href="/product-category/men/" class="promo-card promo-card--gray promo-card--men reveal">
-        <div class="promo-card__titles">
+    <a href="/product-category/men/" class="promo-card promo-card--gray promo-card--men">
+        <div class="promo-card__titles reveal">
             <h2 class="promo-card__heading">Shop Men</h2>
             <p class="promo-card__body">Mens's new arrivals. It's time to explore your options.</p>
         </div>
@@ -56,8 +56,8 @@
 </section>
 
 <section class="shop-section">
-    <h2 class="shop-section__heading">Women's Best Sellers</h2>
-    <p class="shop-section__body">Our women's bestsellers. They are smooth and soft<br/> with adjustable elastic loop.</p>
+    <h2 class="shop-section__heading">Best Sellers</h2>
+    <p class="shop-section__body">Our bestsellers. They are smooth and soft<br/> with adjustable elastic loop.</p>
     <div class="items reveal">
         <?php echo do_shortcode('[best_selling_products limit="4"]'); ?>
     </div>
